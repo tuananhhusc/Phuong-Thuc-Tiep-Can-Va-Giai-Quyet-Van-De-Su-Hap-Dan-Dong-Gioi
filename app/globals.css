@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+  }
+  body {
+    @apply bg-parchment-200 text-gray-800 antialiased selection:bg-gold-400 selection:text-navy-900 transition-colors duration-500;
+    max-width: 100%;
+  }
+}
+
+.prose {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-spin {
+  animation: slow-spin 15s linear infinite;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-parchment-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-400 rounded-full border-2 border-parchment-100;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold-500;
+}
+
+/* Specific tooltip styling for footnotes could go here */
+.footnote-ref {
+  @apply text-burgundy-600 font-semibold align-super text-xs no-underline hover:text-burgundy-800 transition-colors ml-0.5;
+  border-bottom: none !important;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dark theme / Twilight overrides for prose */
+.dark-theme .prose {
+  --tw-prose-body: #EFEBE1;
+  --tw-prose-headings: #FDFBF7 !important;
+  --tw-prose-lead: #E3DDD0;
+  --tw-prose-links: #D4AF37;
+  --tw-prose-bold: #FDFBF7;
+  --tw-prose-counters: #D4AF37;
+  --tw-prose-bullets: #D4AF37;
+  --tw-prose-hr: #D4AF37;
+  --tw-prose-quotes: #FDFBF7;
+  --tw-prose-quote-borders: #D4AF37;
+  --tw-prose-captions: #E3DDD0;
+  --tw-prose-code: #FDFBF7;
+  --tw-prose-pre-code: #EFEBE1;
+  --tw-prose-pre-bg: #051024;
+  --tw-prose-th-borders: #D4AF37;
+  --tw-prose-td-borders: rgba(212, 175, 55, 0.2);
+  
+  background-color: #0B1D3A !important;
+  color: #EFEBE1 !important;
+  border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+.prose h1 {
+  line-height: 1.3 !important;
+  margin-top: 1em !important;
+}
+
+.dark-theme .prose h1,
+.dark-theme .prose h2,
+.dark-theme .prose h3,
+.dark-theme .prose h4 {
+  color: #FDFBF7 !important;
+}
+
+.dark-theme .prose h2 {
+  border-bottom-color: rgba(212, 175, 55, 0.4);
+}
+
+.dark-theme .prose blockquote {
+  background-color: #051024;
+  color: #FDFBF7;
+  border-left-color: #D4AF37;
+}
+
+.dark-theme .prose td {
+  border-bottom-color: rgba(212, 175, 55, 0.1);
+}
+
