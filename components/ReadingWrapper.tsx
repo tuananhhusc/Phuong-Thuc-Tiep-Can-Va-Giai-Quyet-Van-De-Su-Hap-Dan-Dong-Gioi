@@ -71,7 +71,7 @@ export default function ReadingWrapper({ content, tocHeadings }: ReadingWrapperP
       </section>
 
       {/* Main Content Layout */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 py-6 sm:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
           
           {/* Left Sidebar: Table of Contents */}

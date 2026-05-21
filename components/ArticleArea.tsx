@@ -57,7 +57,7 @@ export default function ArticleArea({ content, fontSize, theme = "parchment" }: 
   return (
     <div className="relative">
       <article 
-        className={`prose prose-academic w-full max-w-full p-5 sm:p-8 md:p-12 shadow-sm rounded-sm border transition-all duration-300 ${
+        className={`prose prose-academic w-full max-w-full px-4 py-6 sm:p-8 md:p-12 shadow-none sm:shadow-sm rounded-none sm:rounded-sm border-x-0 sm:border transition-all duration-300 ${
           isDark 
             ? "bg-navy-800 border-gold-400/20 text-parchment-100" 
             : "bg-parchment-100 border-parchment-300 text-gray-800"
